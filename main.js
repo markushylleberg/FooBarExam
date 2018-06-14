@@ -2,12 +2,10 @@
 
 let data;
 let json;
-let warnings = 0;
 let amount;
 let testcircledata;
 let nyProcent;
 let bartenderz;
-let bajernr = 0;
 let solgteBajer;
 let solgteNavn;
 
@@ -115,7 +113,6 @@ function bartenders(){
 //  ********************* OPDATER:  ORDERS ************************************* //
 //  ********************* OPDATER:  ORDERS ************************************* //
 function updateOrders(){
-
 
     for(let i =0; i < json.queue.length+10; i++){
         let array = json.queue[i];
