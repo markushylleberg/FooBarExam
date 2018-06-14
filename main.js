@@ -13,7 +13,9 @@ let solgteNavn;
 
 document.addEventListener("DOMContentLoaded", loadData);
 
-//  ******************** OVERVIEW ********************************
+
+//  ********************* UPDATÉR ALLE ************************************* //
+//  ********************* UPDATÉR ALLE ************************************* //
 function loadData(){
 data = FooBar.getData();
 json = JSON.parse(data);
@@ -26,7 +28,15 @@ updateCircles();
 updateBartenders();
 updateOrders();
 }
+//  ********************* UPDATÉR ALLE ************************************* //
+//  ********************* UPDATÉR ALLE ************************************* //
 
+// ///////////
+// ///////////
+// ///////////
+
+//  ********************* AFSPIL FUNKTIONER ************************************* //
+//  ********************* AFSPIL FUNKTIONER ************************************* //
 setTimeout(function(){
     soldBeersGraf();
 }, 5);
@@ -39,33 +49,19 @@ setTimeout(function(){
 }, 10);
 
 setInterval(loadData, 500);
-setInterval(soldBeers, 25000);
+//  ********************* AFSPIL FUNKTIONER ************************************* //
+//  ********************* AFSPIL FUNKTIONER ************************************* //
 
-// let ordersUp = json.queue.order;
+// ///////////
+// ///////////
+// ///////////
 
-// ordersUp.forEach (beerType => {
-//     let count = total[beerType];
-//     if( count == undefined ){
-//         count = 0;
-//     }
-
-//     count++;
-// total[beerType] = count;
-
-// console.log("total: ", total);
-
-// })
-
-
-
-
-
-
+//  ********************* UPDATE:  BARTENDERS ************************************* //
+//  ********************* UPDATE:  BARTENDERS ************************************* //
 function updateBartenders(){
 
     for(let i =0; i < json.bartenders.length; i++){
         let detail = json.bartenders[i].statusDetail;
-        // document.querySelector(".output").children[i].innerHTML = json.bartenders[i].name+"<br>"+json.bartenders[i].status+"<br>"+detail;
 
         if(detail == "pourBeer"){
         document.querySelector(".output").children[i].innerHTML = json.bartenders[i].name+"<br>"+json.bartenders[i].status+"<br>"+"Pouring beer";
@@ -85,7 +81,15 @@ function updateBartenders(){
         }
         }
 }
+//  ********************* UPDATE:  BARTENDERS ************************************* //
+//  ********************* UPDATE:  BARTENDERS ************************************* //
 
+// ///////////
+// ///////////
+// ///////////
+
+//  ********************* CREATE BARTENDERS ************************************* //
+//  ********************* CREATE BARTENDERS ************************************* //
 function bartenders(){
     bartenderz = json.bartenders;
     for(let i = 0; i < bartenderz.length; i++) {
@@ -96,13 +100,20 @@ function bartenders(){
         element.classList.toggle("testclass_to");
         bartenderImg.classList.toggle("testclass");
         bartenderImg.setAttribute("src", "images/ready.png");
-        // bartenderImg.appendChild(document.createAttribute);
+
         document.querySelector(".output").appendChild(element);
         document.querySelector(".status_bar").appendChild(bartenderImg);
-        // document.querySelector(".output").appendChild(bartenderImg);
     }
 }
+//  ********************* CREATE BARTENDERS ************************************* //
+//  ********************* CREATE BARTENDERS ************************************* //
 
+// ///////////
+// ///////////
+// ///////////
+
+//  ********************* OPDATER:  ORDERS ************************************* //
+//  ********************* OPDATER:  ORDERS ************************************* //
 function updateOrders(){
 
 
@@ -117,49 +128,20 @@ function updateOrders(){
 
         document.querySelector("#order_div").children[i].innerHTML = "";
         document.querySelector("#order_div").children[i].textContent = array.order;
-
-        // console.log(nynyArray);
-        // if(json.queue[i] == null){
-        //     console.log("tom");
-
-        // }
-        
-        // console.log(array);
     }
    
 }
+//  ********************* OPDATER:  ORDERS ************************************* //
+//  ********************* OPDATER:  ORDERS ************************************* //
 
+// ///////////
+// ///////////
+// ///////////
 
-// function orders(){
-//     let customer = json.queue;
-//     // console.log("Hej");
-
-
-//     for(let i = 0; i < customer.length; i++) {
-//         let customer = json.queue;
-//         let element = document.createElement("p");
-//         let billede = document.createElement("img");
-
-//         billede.setAttribute("src", "images/test.png");
-//         billede.classList.toggle("small");
-//         element.classList.toggle("order_tekst");
-//         element.appendChild(document.createTextNode(" "));
-
-
-//         document.querySelector("#order_div").appendChild(billede);
-//         document.querySelector("#order_div").appendChild(element);
-//     }
-// }
-
-//  ******************** OVERVIEW SLUT ********************************
-
-//  ********************* STORAGE *************************************
-
+//  ********************* CREATE BARCHART (STORAGE) ************************************* //
+//  ********************* CREATE BARCHART (STORAGE) ************************************* //
 function barChart(){
     let info = json.storage;
-    // let testBar = info[0].amount * 6.5;
-    
-    // document.querySelector(".barbox").style.strokeDashoffset = -65+testBar;
 
     for(let i =0; i < info.length; i++){
         let nyLine = document.createElementNS("http://www.w3.org/2000/svg","line");
@@ -183,16 +165,18 @@ function barChart(){
 
         if(info[i].amount <= 2){
             nyLine.classList.toggle("alert");
-            // warnings++;
         }
-
-        // console.log(infoNavn);
     }
-
-    // console.log("original tal: "+info[0].amount);
-    // console.log(testBar);
 }
+//  ********************* CREATE BARCHART (STORAGE) ************************************* //
+//  ********************* CREATE BARCHART (STORAGE) ************************************* //
 
+// ///////////
+// ///////////
+// ///////////
+
+//  ********************* OPDATER: CIRKLER  OG  SOLD BEERS ************************************* //
+//  ********************* OPDATER: CIRKLER  OG  SOLD BEERS ************************************* //
 function updateCircles(){
 
     for(let i =0; i < json.taps.length; i++){
@@ -205,19 +189,20 @@ function updateCircles(){
     document.querySelector(".procenter").children[i].innerHTML = nyProcent;
     document.querySelector(".bajerNavne").children[i].innerHTML = solgteNavn;
     document.querySelector(".solgtgraf"+[i]).style.strokeDasharray = 180-solgteBajer;
-
-    // console.log(solgteNavn, solgteBajer);
-
     }
 }
+//  ********************* OPDATER: CIRKLER  OG  SOLD BEERS ************************************* //
+//  ********************* OPDATER: CIRKLER  OG  SOLD BEERS ************************************* //
+
+// ///////////
+// ///////////
+// ///////////
+
+//  ********************* CREATE CIRCLES (STORAGE) ************************************* //
+//  ********************* CREATE CIRCLES (STORAGE) ************************************* //
 
 function circles(){
     let taps = json.taps;
-    // amount = json.taps;
-    // testcircledata = (json.taps[0].level/250)*6.3;
-
-    // document.querySelector(".testcircle").style.strokeDashoffset = 65-testcircledata;
-    // console.log(testcircledata);
 
     for(let i =0; i < taps.length; i++){
 
@@ -242,23 +227,17 @@ function circles(){
         document.querySelector("#minSvg2").appendChild(nyCirkel);
         document.querySelector("#minSvg2").appendChild(nyCirkelTekst);
         document.querySelector(".procenter").appendChild(nyProcent);
-        // document.querySelector("#minSvg2").appendChild(nyProcent);
         console.log("hej");
     }
 }
+//  ********************* CREATE CIRCLES (STORAGE) ************************************* //
+//  ********************* CREATE CIRCLES (STORAGE) ************************************* //
 
-// function loadCircle(){
-// // console.log(testcircledata);
-// }
+// ///////////
+// ///////////
+// ///////////
 
-
-
-
-
-//  ********************* STORAGE SLUT *************************************
-
-
-
+// *********************** BEVEAGES ************************** //
 // *********************** BEVEAGES ************************** //
 
 function loadBeers(){
@@ -267,14 +246,12 @@ function loadBeers(){
 
     let template = document.querySelector("#beveages_template");
     let comtainer = document.querySelector("#beveages_container");
-    // let popUpTemp = document.querySelector("#popUp");
-    // let popKnap = document.querySelector(".readmore");
+
 
     beer.forEach( function(element){
 
     let label = element.label;
     let klon = template.cloneNode(true).content;
-    // let klonPop = popUpTemp.cloneNode(true).content;
 
     klon.querySelector(".data-name").textContent = element.name;
     klon.querySelector(".data-category").textContent = element.category;
@@ -284,13 +261,10 @@ function loadBeers(){
     klon.querySelector(".data-appear").textContent = element.description.appearance;
     klon.querySelector(".data-overall").textContent = element.description.overallImpression;
 
-    // klon.querySelector(".data-navnPop").textContent = element.name;
-    // klon.querySelector(".data-catPop").textContent = element.category;
 
 
     console.log(label);
     document.querySelector("#beveages_container").appendChild(klon);
-    // document.querySelector("#beveages_container").appendChild(klonPop);
 
     })
 
@@ -301,23 +275,15 @@ function loadBeers(){
         nyClass.style.opacity = "0";
     }
 }
+// *********************** BEVEAGES ************************** //
+// *********************** BEVEAGES ************************** //
 
-function soldBeers(){
+// ///////////
+// ///////////
+// ///////////
 
-    for(let i =0; i < 10; i++){
-    let sold = Array.from(json.serving[i].order);
-    let soldd = sold.join(",");
-    let solddd = soldd.split(",");
-
-    console.log(soldd);
-    if(soldd.indexOf("El Hefe") >= 0){
-        bajernr++;
-        console.log("der er en el hefe!");
-        console.log(bajernr);
-    }
-}
-}
-
+// *********************** SOLD BEERS (OVERVIEW) ************************** //
+// *********************** SOLD BEERS (OVERVIEW) ************************** //
 
 function soldBeersGraf(){
     let jsontaps = json.taps;
@@ -348,15 +314,16 @@ function soldBeersGraf(){
     }
 
 }
+// *********************** SOLD BEERS (OVERVIEW) ************************** //
+// *********************** SOLD BEERS (OVERVIEW) ************************** //
 
-// *********************** BEVEAGES SLUT ************************** //
-
-
-
+// ///////////
+// ///////////
+// ///////////
 
 // **************************** GENERAL FUNKTIONALITET **************** //
-
-
+// **************************** GENERAL FUNKTIONALITET **************** //
+// **************************** GENERAL FUNKTIONALITET **************** //
 
 document.querySelector("#navigation").addEventListener("click", showMenu);
 document.querySelector("#navigation").addEventListener("click", flyv);
@@ -367,14 +334,6 @@ function showMenu(){
     document.querySelector("#navigation").classList.toggle("show");
     document.querySelector(".bar1").classList.toggle("spin");
     document.querySelector(".bar2").classList.toggle("spinn");
-}
-
-
-function komNu(){
-    barChart();
-    circles();
-    bartenders();
-    loadBeers();
 }
 
 function flyv(){
@@ -394,8 +353,8 @@ function flyv(){
         document.querySelector("#overview").style.marginLeft = "100vw";
     }
 
-
-    // HUSK AT FLYTTE DISSE
 }
 
+// **************************** GENERAL FUNKTIONALITET **************** //
+// **************************** GENERAL FUNKTIONALITET **************** //
 // **************************** GENERAL FUNKTIONALITET **************** //

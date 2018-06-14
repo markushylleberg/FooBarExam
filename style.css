@@ -177,14 +177,16 @@ body{
 
 .bartender_template img{
     width: 20%;
-    margin-bottom: 3vh;
-    margin-top: -3vh;
+    margin-bottom: 4vh;
+    margin-top: -4.2vh;
+    margin-left: 0vw;
 }
 
 .bartender_template p{
     margin-bottom: 90px;
-    margin-left: 7vw;
-    margin-top: 2vh;
+    margin-left: 8vw;
+    margin-top: 0vh;
+    text-align: left;
 }
 
 .bartendernavn{
@@ -385,15 +387,15 @@ svg{
 
 @keyframes alert{
     0%{
-        stroke: yellow;
+        stroke: rgba(255, 255, 0, 0.534);
     }
 
     50%{
-        stroke: red;
+        stroke: #ff000088;
     }
 
     100%{
-        stroke: yellow;
+        stroke: rgba(255, 255, 0, 0.534);
     }
 }
 
@@ -453,7 +455,7 @@ circle{
 .testcircle0, .testcircle1, .testcircle2, .testcircle3, .testcircle4, .testcircle5, .testcircle6{
     display: block;
     stroke-width: 2;
-    stroke: rgba(255, 255, 0, 0.534);
+    stroke: rgba(0, 255, 13, 0.534);
     fill: none;
     stroke-dasharray: 65;
     stroke-dashoffset: 65;
