@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
+    <title>FooBar Dashboard</title>
+</head>
+<body>
+
+<div id="container">
+
+<div id="navigation">
+        <div class="nav_button">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+        </div>
+    <h1 id="nav_titel">FooBar</h1>
+    <div class="nav1">
+        <img src="images/home.png">
+        <a href="#" class="overview">OVERVIEW</a>
+    </div>
+    <div class="nav2">
+            <img src="images/beveages.png">
+        <a href="#">BEVEAGES</a>
+    </div>
+    <div class="nav3">
+            <img src="images/storage.png">
+        <a href="#">STORAGE</a>
+    </div>
+</div>
+
+
+
+<div id="beveages">
+    <h1>BEVEAGES</h1>
+    <div id="beveages_container">
+        <template id="beveages_template">
+                <div class="beveages_div">
+
+                <div class="gridcol2">
+                <img class="data-img" src="">
+                </div>
+
+                        <div class="gridcol1">
+                <p class="data-name"></p>
+                <p class="data-category"></p>
+                <p class="data-alc"></p>
+                <img src="images/beveages.png">
+                <p class="data-info"></p>
+                <p class="data-appear"></p>
+                <p class="data-overall"></p>
+                    <!-- </div> -->
+                <!-- <button class="readmore">READ MORE</button> -->
+                <!-- <div class="popOp">
+                        <p class="data-navnPop"></p>
+                        <p class="data-catPop"></p>
+                </div> -->
+                </div>
+        </template>
+    </div>
+    <div id="popVindue">
+            <template id="popUp">
+            <div class="popVinduediv"></div>
+                <div class="grid">
+                <p class="data-navnPop"></p>
+                <p class="data-catPop"></p>
+            </div>
+            </div>
+        </template>
+    </div>
+
+</div>
+
+
+
+<div id="storage">
+        <h1>STORAGE</h1>
+        <div class="storage_column1">
+            <div class="graf">
+                    <h3>AMOUNT OF KEGS</h3>
+                    <svg id="minSvg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 72">
+                        <rect id="baggrund" width="100%" height="100%"></rect>
+                        <rect id="xGraf" x='3%' y='2%' width='.5' height='65'></rect>
+                        <rect id="yGraf" x='3%' y='92%' width='93' height='.5'></rect>
+                        <!-- 91,6 - 1.6 = 90 / 5 = 18 //// +18% pr. mark -->
+                        <g class="markeringer">
+                        <rect class="mark" x='2.2%' y='1.6%' width='2' height='.3'></rect>
+                        <rect class="mark" x='2.2%' y='19.6%' width='2' height='.3'></rect>
+                        <rect class="mark" x='2.2%' y='37.6%' width='2' height='.3'></rect>
+                        <rect class="mark" x='2.2%' y='55.6%' width='2' height='.3'></rect>
+                        <rect class="mark" x='2.2%' y='73.6%' width='2' height='.3'></rect>
+                        <rect class="mark" x='2.2%' y='91.6%' width='2' height='.3'></rect>
+                        </g>
+
+                        <g class="markeringer">
+                                <rect class="mark" x='2.2%' y='1.73%' width='95' height='.05'></rect>
+                                <rect class="mark" x='2.2%' y='19.73%' width='95' height='.05'></rect>
+                                <rect class="mark" x='2.2%' y='37.73%' width='95' height='.05'></rect>
+                                <rect class="mark" x='2.2%' y='55.73%' width='95' height='.05'></rect>
+                                <rect class="mark" x='2.2%' y='73.73%' width='95' height='.05'></rect>
+                                <rect class="mark" x='2.2%' y='91.73%' width='95' height='.05'></rect>
+                                </g>
+
+                        <g class="numrer">
+                                <text class="marknummer" x='0.5%' y='2.9%'>10</text>
+                                <text class="marknummer" x='0.5%' y='20.9%'>8</text>
+                                <text class="marknummer" x='0.5%' y='38.9%'>6</text>
+                                <text class="marknummer" x='0.5%' y='56.9%'>4</text>
+                                <text class="marknummer" x='0.5%' y='74.9%'>2</text>
+                                <text class="marknummer" x='0.5%' y='92.9%'>0</text>
+                            </g>
+
+                            <line class="barbox hide" x1='7' y1='1.1' x2='7' y2='66.3'></line>
+                    </svg>
+            </div>
+
+        </div>
+        <div class="storage_column2">
+                <div class="diagrammer">
+            <h3>CURRENT AMOUNT IN TAPS</h3>
+            <svg id="minSvg2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 172">
+            <rect id="baggrund" width="100%" height="100%"></rect>
+            <circle class="testcircle hide" cx="25" cy="15" r="10"></circle>
+            <g class="procenter"></g>
+            </svg>
+                </div>
+        </div>
+</div>
+
+
+<div id="overview">
+        <h1>OVERVIEW</h1>
+        <div class="content_column1">
+            <div class="bartenders">
+                <h3>BARTENDERS</h3>
+                <div class="bartender_template">
+                    <div class="status_bar"></div>
+                    <div class="output"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content_column2">
+            <div class="ko_nummer">
+                <h3>CURRENT QUEUE</h3>
+                <p class="ko_p"></p>
+            </div>
+            <div class="serv_nummer">
+                <h3>BEING SERVED</h3>
+                <p class="serv_p"></p>
+            </div>
+        </div>
+        <div class="content_column3">
+            <div class="orders">
+                <h3>ORDERS</h3>
+                    <div id="order_div">
+                    <!-- <img src="images/test.png" class="data-billede" > -->
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    </div>
+            </div>
+        </div>
+        
+        <div class="overview_to">
+            <div class="minSvgKasse">
+                    <h3>BEERS SOLD FROM TAPS IN USE</h3>
+                    <svg id="minSvg3" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 72">
+                        <rect id="baggrund" width="100%" height="30"></rect>
+                        <rect id="xGraf" x='15%' y='2%' width='.1' height='26.5'></rect>
+                        <rect id="yGraf" x='15%' y='38.8%' width='80' height='.1'></rect>
+                        <g class="bajerNavne">
+                            <!-- <text></text> -->
+                        </g>
+
+                        <g class="markeringer">
+                                <rect class="mark" x='20%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='25%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='30%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='35%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='40%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='45%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='50%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='55%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='60%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='65%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='70%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='75%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='80%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='85%' y='2.1%' width='.02' height='26.3'></rect>
+                                <rect class="mark" x='90%' y='2.1%' width='.02' height='26.3'></rect>
+                        </g>
+
+                        <g class="numrer">
+                                <text class="procentnr" x='14.8%' y='40.5%'>0</text>
+                                <text class="procentnr" x='19.8%' y='40.5%'>5</text>
+                                <text class="procentnr" x='24.8%' y='40.5%'>10</text>
+                                <text class="procentnr" x='29.8%' y='40.5%'>15</text>
+                                <text class="procentnr" x='34.8%' y='40.5%'>20</text>
+                                <text class="procentnr" x='39.8%' y='40.5%'>25</text>
+                                <text class="procentnr" x='44.8%' y='40.5%'>30</text>
+                                <text class="procentnr" x='49.8%' y='40.5%'>35</text>
+                                <text class="procentnr" x='54.8%' y='40.5%'>40</text>
+                                <text class="procentnr" x='59.8%' y='40.5%'>45</text>
+                                <text class="procentnr" x='64.8%' y='40.5%'>50</text>
+                                <text class="procentnr" x='69.8%' y='40.5%'>55</text>
+                                <text class="procentnr" x='74.8%' y='40.5%'>60</text>
+                                <text class="procentnr" x='79.8%' y='40.5%'>65</text>
+                                <text class="procentnr" x='84.8%' y='40.5%'>70</text>
+                                <text class="procentnr" x='89.8%' y='40.5%'>75</text>
+                            </g>
+
+                        </svg>
+            </div>
+                
+    
+    
+            </div>
+        
+        </div>
+
+
+</div>
+
+    <script src="http://petlatkea.dk/2018/front/foobar.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
